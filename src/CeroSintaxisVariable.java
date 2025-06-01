@@ -18,7 +18,5 @@ public class CeroSintaxisVariable {
 
 
         System.out.printf("¡Hola, JAVA!");
-
-
     }
 }
