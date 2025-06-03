@@ -1,3 +1,9 @@
+import java.lang.reflect.Array;
+import java.lang.reflect.Type;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.Arrays;
+
 public class DosFuncionesYAlcances {
 
 
@@ -44,10 +50,87 @@ public class DosFuncionesYAlcances {
         }
         //Uso >> boolean mayor = esMayorDeEdad(22, "Mario");    System.out.println(mayor);
 
+        /* En java no se permite crear una funcion dentro de otra, debe crearse entre la clase y la instancia main*/
+
+
+        //Dificultad extra
+
+        public static int valoresASumar(int a, int b){
+                return a + b;
+        }
+
+        
+
     public static void main(String[] args) {
 
+        //Algunas funciones creadas en el lenguaje
 
+            String nombreCompleto = "Mario Cesar Deossa Leal";
 
+            nombreCompleto.length(); //Analiza la cantidad de caracteres.
+            nombreCompleto.toUpperCase(); //Todo el texto en mayusculas.
+            nombreCompleto.toLowerCase(); //Todo el texto en minusculas.
+            nombreCompleto.contains("Cesar"); //Valida si la cadena de texto se encuentra.
+            nombreCompleto.substring(0,5);
+
+        //Algunas funciones matematicas
+
+            Math.random(); //Genera un numero aleatorio.
+            Math.abs(-5); //Valor absoluto.
+            Math.sqrt(16); //Raiz cuadrada del parametro.
+            Math.pow(2,5); //Potencia.
+            Math.max(20,50); //Valor mas alto entre los dos parametros.
+
+        //Funciones para definir el tiempo
+
+            LocalDate fecha = LocalDate.now(); //Fecha actual
+            LocalTime hora = LocalTime.now(); //Hora actual
+            LocalDate.of(2025,6,1); //Crea una fecha a tu antojo
+
+        //Funciones para arreglos
+
+            int[] numeros = {5,9,7,5,1,3,2};
+
+            Arrays.sort(numeros); //Ordena los numeros de menos a mayor
+            Arrays.toString(numeros); //Convierte los numeros a cadena de texto
+
+        //Utilidades basicas generales
+
+            Integer.parseInt("123215"); //Covierte cadena de texto a numeros
+            Double.parseDouble("3.14"); //Convierte cadena de tecto a double o decimal
+            String.valueOf(50); //Convierte numero a cadena de texto.
+
+        //Impresion de cada uno de los ejemplos.
+
+            System.out.println(obtenerAleatorio());
+            System.out.println("La suma de los valores da como resultado = " + resultadoSuma(50, 20));
+            System.out.println(esMayorDeEdad(32, "Mario"));
+
+            System.out.println(nombreCompleto.length());
+            System.out.println(nombreCompleto.toUpperCase());
+            System.out.println(nombreCompleto.toLowerCase());
+            System.out.println(nombreCompleto.contains("Cesar"));
+            System.out.println(nombreCompleto.substring(0,5));
+
+            System.out.println(Math.random());
+            System.out.println(Math.abs(-520));
+            System.out.println(Math.sqrt(81));
+            System.out.println(Math.pow(2,10));
+            System.out.println(Math.max(1525,1528));
+
+            System.out.println(fecha);
+            System.out.println(hora);
+            System.out.println(LocalDate.of(2022,11,12));
+
+            System.out.println(Arrays.toString(numeros));
+
+            System.out.println(Integer.parseInt("60876682"));
+            System.out.println(Double.parseDouble("2.45"));
+            System.out.println(String.valueOf(156));
+
+            //Dificultad extra.
+
+            System.out.println(String.valueOf(valoresASumar(1,5)));
 
     }
 }
