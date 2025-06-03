@@ -55,13 +55,36 @@ public class DosFuncionesYAlcances {
 
         //Dificultad extra
 
-        public static int valoresASumar(int a, int b){
-                return a + b;
+        public static int valoresASumar(String a, String b){
+                int numeroUno = Integer.parseInt(a);
+                int numeroDos = Integer.parseInt(b);
+                return numeroUno + numeroDos;
         }
 
+        public static void numerosDeUnoACien(String a, String b){
+                int contadorDeNumero=0;
+
+                for (int i = 0 ; i <= 100 ; i++){
+                        boolean multiploTres = i % 3 == 0;
+                        boolean multiploCinco = i % 5 ==0;
+
+                        if (multiploTres && multiploCinco){
+                                System.out.println(a + b);
+                        }else if (multiploTres){
+                                System.out.println(a);
+                        }else if (multiploCinco){
+                                System.out.println(b);
+                        }else {
+                                System.out.println(i);
+                                contadorDeNumero++;
+                        }
+        }
+
+        }
         
 
     public static void main(String[] args) {
+
 
         //Algunas funciones creadas en el lenguaje
 
@@ -130,7 +153,10 @@ public class DosFuncionesYAlcances {
 
             //Dificultad extra.
 
-            System.out.println(String.valueOf(valoresASumar(1,5)));
+            int resultadoDeSuma = valoresASumar("8","15");
+            System.out.println(resultadoDeSuma);
+
+            numerosDeUnoACien("fizz","buzz");
 
     }
 }
